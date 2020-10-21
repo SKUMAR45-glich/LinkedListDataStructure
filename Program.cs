@@ -12,6 +12,7 @@ namespace LinkedListDataStructure
             list.Add(70);
 
             list.PrintReverse(list.head);
+            list.Display();
             
         }
     }

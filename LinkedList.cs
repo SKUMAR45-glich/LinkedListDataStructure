@@ -38,6 +38,19 @@ namespace LinkedListDataStructure
             
         }
 
-        
+        internal void Display()
+        {
+            Node temp = this.head;
+            if (temp == null)
+            {
+                Console.WriteLine("List is empty");
+                return;
+            }
+            while (temp != null)
+            {
+                Console.WriteLine(temp.data + "");
+                temp = temp.next;
+            }
+        }
     }
 }
