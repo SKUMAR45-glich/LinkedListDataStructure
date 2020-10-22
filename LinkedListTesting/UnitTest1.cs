@@ -10,7 +10,6 @@ namespace LinkedListTesting
         {
             LinkedList list = new LinkedList();
 
-
         }
     }
 }
