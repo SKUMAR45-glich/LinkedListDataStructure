@@ -26,14 +26,23 @@ namespace LinkedListDataStructure
             Console.WriteLine("{0} inserted into linked list", node.data);
         }
 
-        internal Node removeFirstNode(Node head)
+        internal Node removeLastNode(Node head)
         {
             if (head == null)
                 return null;
 
-            // Move the head pointer to the next node 
-            Node temp = head;
-            head = head.next;
+            if (head.next == null)
+            {
+                return null;
+            }
+
+            // Find the second last node 
+            Node second_last = head;
+            while (second_last.next.next != null)
+                second_last = second_last.next;
+
+            // Change next of second last 
+            second_last.next = null;
 
             return head;
         }

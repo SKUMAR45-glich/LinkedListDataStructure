@@ -13,7 +13,7 @@ namespace LinkedListDataStructure
             list.Add(70);
 
             list.Display();
-            list.removeFirstNode(list.head);
+            list.removeLastNode(list.head);
             list.Display();
 
         }
