@@ -26,32 +26,6 @@ namespace LinkedListDataStructure
             Console.WriteLine("{0} inserted into linked list", node.data);
         }
 
-        public bool search(Node head, int x)
-        {
-            // Base case 
-            if (head == null)
-                return false;
-
-           
-            if (head.data == x)
-                return true;
-
-            // Recur for remaining list 
-            return search(head.next, x);
-        }
-        internal void PrintReverse(Node head)
-        {
-            
-            if (head == null)
-            {
-                Console.WriteLine("List is empty");
-                return;
-            }
-            PrintReverse(head.next);
-            Console.WriteLine(head.data + "");
-            
-        }
-
         internal void Display()
         {
             Node temp = this.head;

@@ -14,9 +14,8 @@ namespace LinkedListDataStructure
 
             list.Display();
 
-            Console.WriteLine("Node to be searched:");
-            int key = Convert.ToInt32(Console.ReadLine());
-            list.search(list.head,key);
+            Console.WriteLine("After Entering element at requied position:\n");
+            list.InsertAtParticularPosition(3, 40);
             list.Display();
 
         }

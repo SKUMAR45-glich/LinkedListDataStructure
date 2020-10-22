@@ -9,6 +9,8 @@ namespace LinkedListTesting
         public void TestMethod1()
         {
             LinkedList list = new LinkedList();
+
+
         }
     }
 }
