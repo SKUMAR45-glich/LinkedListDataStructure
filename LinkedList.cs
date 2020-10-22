@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LinkedListDataStructure
 {
-    class LinkedList
+    public class LinkedList
     {
         internal Node head;
         internal void Add(int data)
@@ -26,25 +26,18 @@ namespace LinkedListDataStructure
             Console.WriteLine("{0} inserted into linked list", node.data);
         }
 
-        internal Node removeLastNode(Node head)
+        public bool search(Node head, int x)
         {
+            // Base case 
             if (head == null)
-                return null;
+                return false;
 
-            if (head.next == null)
-            {
-                return null;
-            }
+           
+            if (head.data == x)
+                return true;
 
-            // Find the second last node 
-            Node second_last = head;
-            while (second_last.next.next != null)
-                second_last = second_last.next;
-
-            // Change next of second last 
-            second_last.next = null;
-
-            return head;
+            // Recur for remaining list 
+            return search(head.next, x);
         }
         internal void PrintReverse(Node head)
         {

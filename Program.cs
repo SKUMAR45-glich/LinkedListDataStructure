@@ -2,9 +2,9 @@
 
 namespace LinkedListDataStructure
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             LinkedList list = new LinkedList();
             list.Add(56);
@@ -13,7 +13,10 @@ namespace LinkedListDataStructure
             list.Add(70);
 
             list.Display();
-            list.removeLastNode(list.head);
+
+            Console.WriteLine("Node to be searched:");
+            int key = Convert.ToInt32(Console.ReadLine());
+            list.search(list.head,key);
             list.Display();
 
         }
