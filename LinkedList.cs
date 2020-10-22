@@ -25,6 +25,18 @@ namespace LinkedListDataStructure
             }
             Console.WriteLine("{0} inserted into linked list", node.data);
         }
+
+        internal Node removeFirstNode(Node head)
+        {
+            if (head == null)
+                return null;
+
+            // Move the head pointer to the next node 
+            Node temp = head;
+            head = head.next;
+
+            return head;
+        }
         internal void PrintReverse(Node head)
         {
             
