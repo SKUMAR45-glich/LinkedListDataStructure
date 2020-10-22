@@ -14,8 +14,8 @@ namespace LinkedListDataStructure
 
             list.Display();
 
-            Console.WriteLine("After Entering element at requied position:\n");
-            list.InsertAtParticularPosition(3, 40);
+            int pos = Convert.ToInt32(Console.ReadLine());
+            Node node = list.removeNode(list.head,pos);
             list.Display();
 
         }

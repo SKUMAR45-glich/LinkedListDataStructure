@@ -40,34 +40,37 @@ namespace LinkedListDataStructure
                 temp = temp.next;
             }
         }
-        internal Node InsertAtParticularPosition(int position, int data)
+        internal Node removeNode(Node head, int pos)
         {
-            if (position < 1)
-                Console.WriteLine("Invalid position");
-            if (position == 1)
+            if (head == null)
+                return null;
+
+            Node temp = head;
+
+            // If head needs to be removed 
+            if (pos == 1)
             {
-                var newNode = new Node(data);
-                newNode.next = this.head;
-                head = newNode;
+
+                // Change head 
+                head = temp.next;
+                return head;
             }
-            else
-            {
-                while (position-- != 0)
-                {
-                    if (position == 1)
-                    {
-                        Node node = new Node(data);
-                        node.next = this.head.next;
-                        head.next = node;
-                        break;
-                    }
-                    head = head.next;
-                }
-                if (position != 1)
-                    Console.WriteLine("Position out of range");
-            }
+
+            // Find previous node of the node to be deleted 
+            for (int i = 0; temp != null && i < pos;i++)
+                temp = temp.next;
+
+            // If position is more than number of nodes 
+            if (temp == null || temp.next == null)
+                return head;
+
+            // Node temp->next is the node to be deleted 
+            // Store pointer to the next of node to be deleted 
+            Node next = temp.next.next;
+
+            // Unlink the deleted node from list 
+            temp.next = next;
             return head;
         }
-
-    }
+    } 
 }
